@@ -1,6 +1,6 @@
 # 风和日丽 · fhrl.life
 
-静态网站：`/` 为首页，`/journote/` 为己之言介绍，`/journote/privacy/` 为隐私政策。无需依赖或构建步骤。
+静态网站：`/` 为首页，`/journote/` 为己之言介绍，`/journote/privacy/` 为隐私政策，`/journote/support/` 为支持页面。无需依赖或构建步骤。
 
 本地预览：`python3 -m http.server 8000`，访问 `http://localhost:8000/`。部署时将本目录作为站点根目录，并让服务器支持目录索引（`index.html`），将 `/journote` 和 `/journote/privacy` 重定向到带尾斜杠的目录路径。
 
