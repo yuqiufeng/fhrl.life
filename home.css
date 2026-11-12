@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f8f2;
+  --ink: #455344;
+  --quiet: #697862;
+}
+* { box-sizing: border-box; }
+html { min-height: 100%; background: var(--paper); }
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.masthead { padding: 35px 48px; color: #7d8c76; }
+.masthead span { font-size: 10px; letter-spacing: .25em; }
+main {
+  width: min(100%, 800px);
+  margin: auto;
+  padding: 0 25px 70px;
+  text-align: center;
+}
+.landscape { width: min(100%, 650px); margin: 0 auto 7px; }
+.landscape svg { display: block; width: 100%; height: auto; }
+h1 {
+  margin: 0;
+  font-family: "Songti SC", "Noto Serif CJK SC", "STSong", serif;
+  font-size: clamp(32px, 4.3vw, 48px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: .13em;
+  text-wrap: balance;
+}
+h1 span { white-space: nowrap; }
+main p { margin: 22px 0 0; color: var(--quiet); font-size: 12px; line-height: 1.9; letter-spacing: .18em; }
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 26px 22px 28px;
+  color: #6e7b67;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.8;
+}
+footer small { font-size: 10px; letter-spacing: .08em; }
+footer a { display: inline-flex; align-items: center; gap: 5px; color: inherit; text-decoration: none; }
+footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
+footer a:focus-visible { outline: 2px solid #788e6d; outline-offset: 5px; }
+footer img { width: 18px; height: 18px; }
+@media (max-width: 600px) {
+  .masthead { padding: 28px 26px; }
+  main { padding: 0 20px 50px; }
+  .landscape { width: 100%; margin-bottom: 19px; }
+  h1 { font-size: 32px; line-height: 1.7; letter-spacing: .09em; }
+  h1 span { display: block; }
+  main p { font-size: 11px; letter-spacing: .1em; margin-top: 20px; }
+  footer { padding-bottom: 22px; }
+}
+@media (max-height: 650px) and (min-width: 601px) {
+  .masthead { padding-block: 22px; }
+  main { padding-bottom: 20px; }
+  .landscape { max-width: 440px; }
+}
